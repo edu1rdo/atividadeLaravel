@@ -18,12 +18,24 @@ class cadastrarUsuario extends Controller
     public function store(request $request){
         $nomeUsuario     = $request->input('nome');//coletando os dados do formulario
         $telefoneUsuario = $request->input('telefone');
+       
+
 
         $model = new cadastrarUsuarioModel();
         $model->nome = $nomeUsuario;
         $model->telefone = $telefoneUsuario;
+       
         $model->save();//armazenar os dados no BD
 
-        return redirect('/cadastrar');
+        return redirect('/addtarefas/salvar');
     }//fim do metodo store
+
+
+
+
+
 }//fim da classe
+
+
+
+

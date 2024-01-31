@@ -13,5 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/cadastrar',[\app\http\Controllers\cadastrarUsuario::class,'index']);
-Route::post('/cadastrar/salvar',[\app.Http\Controllers\cadastrarUsuario::class,'store']);
+Route::get('/cadastrar',[\App\Http\Controllers\cadastrarUsuario::class,'index']);
+Route::post('/cadastrar/salvar',[\App\Http\Controllers\cadastrarUsuario::class, 'store']);
