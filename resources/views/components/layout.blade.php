@@ -26,6 +26,16 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="">Consultar</a>
               </li>
+
+              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">Login</a>
+              </li>
+
+              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">Cadastrar-se</a>
+              </li>
  
               
             <form class="d-flex" role="search">

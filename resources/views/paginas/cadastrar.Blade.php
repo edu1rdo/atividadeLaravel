@@ -2,28 +2,35 @@
 
 
 
-<x-layout title="login Cadastro">
-	<div class="container">
-		@foreach($dados as $dado)
-		<li class="list-group-item">{{$dado->nome}}</li>
-		<li class="list-group-item">{{$dado->telefone}}</li>
-		<br><br>
-		@endforeach
+<x-layout title="Login Cadastro">
+    <style>
+        /* Adicione o seguinte estilo para centralizar o conteúdo */
+        .container {
+            text-align: center;
+            margin-top: 50px; /* Ajuste conforme necessário */
+        }
+
+        /* Adicione margens aos itens da lista para separá-los */
+        .list-group-item {
+            margin: 5px 0;
+        }
+    </style>
+
+    <div class="container">
+     
+  
+
+    <form action="/cadastrar/salvar" method="POST">
+        @csrf <!-- Valida o formulário -->
+        <br>
+        <label>Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Informe seu nome" required/> <br><br>
+
+        <label>CPF:</label>
+        <input type="text" id="cpf" name="cpf" placeholder="99999999999" required/> <br><br>
+
+        <button type="submit">Enviar</button>
+        <br><br>
+    </form>
 	</div>
-
-	
-
-<form action="/cadastrar/salvar" method="POST" >
-	@csrf <!--valida o formulario -->
-		<br>
-		<label>Nome:</label>
-		<input type="text" id="nome" name="nome" placeholder="informe seu nome" required/> <br><br>
-
-		<label> cpf: </label>
-		<input type="text" id="telefone" name="telefone" placeholder="99999999999" required/> <br><br>
-
-		<button type="submit">Enviar</button>
-		<br><br>
-
-
 </x-layout>

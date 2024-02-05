@@ -1,18 +1,23 @@
 
 
-<x-layout title="Tarefas">
-	<div class="container">
-		@foreach($dados as $dado)
-		<li class="list-group-item">{{$dado->nomeTarefa}}</li>
-		<li class="list-group-item">{{$dado->descTarefa}}</li>
-        <li class="list-group-item">{{$dado->dataTarefa}}</li>
-		<br><br>
-		@endforeach
-	</div>
+ <style>
+        /* Adicione o seguinte estilo para centralizar o conteúdo */
+        .container {
+            text-align: center;
+            margin-top: 50px; /* Ajuste conforme necessário */
+        }
 
-<h1>testando
+        /* Adicione margens aos itens da lista para separá-los */
+        .list-group-item {
+            margin: 5px 0;
+        }
+    </style>
+	
+	
 
-	'<x-layout title="addTarefas">
+    <div class="container">
+
+	<x-layout title="addTarefas">
     <form action="/addtarefas/salvar" method="POST">
     @csrf
         <label>Nome da Tarefa:</label>
@@ -27,5 +32,6 @@
         <button type="submit">Enviar</button>
         <a href="consultar">Consultar</a>
     </form>
+    </div>
 </x-layout>
 
